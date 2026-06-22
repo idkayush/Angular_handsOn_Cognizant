@@ -1,0 +1,12 @@
+<section class="hero panel">
+  <h1>{{ portalName }}</h1>
+  <p>A production-style Angular SPA for students to browse courses, enroll, check grades and receive notifications.</p>
+  <div class="stats"><div>Courses Available: <strong>{{ availableCourses }}</strong></div><div>Enrolled: <strong>{{ enrolled }}</strong></div><div>GPA: <strong>{{ gpa }}</strong></div></div>
+  <button [disabled]="!isPortalActive" (click)="onEnrollClick()" routerLink="/enroll">Enroll Now</button>
+  <p *ngIf="message">{{ message }}</p>
+  <label>Search course</label><input [(ngModel)]="searchTerm" placeholder="Type to search">
+  <p>Searching for: {{ searchTerm }}</p>
+  <!-- [property] binding is one-way from component to DOM; [(ngModel)] is two-way, syncing DOM changes back to the component. -->
+</section>
+<app-course-summary-widget></app-course-summary-widget>
+<app-notification></app-notification>

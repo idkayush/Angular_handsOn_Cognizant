@@ -1,0 +1,14 @@
+<section class="course-card card" [ngClass]="cardClasses" [ngStyle]="borderStyle">
+  <h3>{{ course.name }}</h3>
+  <p><strong>Code:</strong> {{ course.code | uppercase }}</p>
+  <p><strong>Credits:</strong> {{ course.credits | creditLabel }}</p>
+  <p><strong>Fee Example:</strong> {{ 12500 | currency:'INR' }} | <strong>Course Number:</strong> {{ course.id | number:'2.0-0' }}</p>
+  <div [ngSwitch]="course.gradeStatus">
+    <span *ngSwitchCase="'passed'" class="badge badge-passed">Passed</span>
+    <span *ngSwitchCase="'failed'" class="badge badge-failed">Failed</span>
+    <span *ngSwitchDefault class="badge badge-pending">Pending</span>
+  </div>
+  <p *ngIf="isExpanded">Detailed view: this card demonstrates ngClass, ngStyle, ngSwitch, built-in pipes and a custom pipe.</p>
+  <button type="button" (click)="toggleDetails($event)">{{ isExpanded ? 'Hide Details' : 'Show Details' }}</button>
+  <button type="button" *ngIf="(enrolledIds$ | async) as ids" (click)="toggleEnrollment($event, ids.includes(course.id))">{{ ids.includes(course.id) ? 'Unenroll' : 'Enroll' }}</button>
+</section>

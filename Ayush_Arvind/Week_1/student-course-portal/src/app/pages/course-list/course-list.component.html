@@ -1,0 +1,11 @@
+<h1 class="page-title">Courses</h1>
+<div class="panel"><label>Search</label><input [(ngModel)]="searchTerm" (input)="applySearch()" placeholder="Search by keyword"><p *ngIf="searchTerm">URL query search: {{ searchTerm }}</p></div>
+<p *ngIf="loading$ | async">Loading courses...</p>
+<p class="error" *ngIf="error$ | async as error">{{ error }}</p>
+<ng-container *ngIf="courses$ | async as courses">
+  <section *ngIf="courses.length > 0; else noCourses" class="grid">
+    <app-course-card appHighlight="lightblue" *ngFor="let course of courses; let i = index; trackBy: trackByCourseId" [course]="course" (click)="openCourse(course)" (enrollRequested)="onEnroll($event)"></app-course-card>
+  </section>
+</ng-container>
+<ng-template #noCourses><p>No courses available.</p></ng-template>
+<p *ngIf="selectedCourseId">Selected course ID: {{ selectedCourseId }}</p>

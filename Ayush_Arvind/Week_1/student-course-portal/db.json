@@ -1,0 +1,59 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "name": "Data Structures",
+      "code": "CS101",
+      "credits": 4,
+      "gradeStatus": "passed"
+    },
+    {
+      "id": 2,
+      "name": "Angular Development",
+      "code": "CS202",
+      "credits": 3,
+      "gradeStatus": "pending"
+    },
+    {
+      "id": 3,
+      "name": "Database Systems",
+      "code": "CS203",
+      "credits": 4,
+      "gradeStatus": "failed"
+    },
+    {
+      "id": 4,
+      "name": "Operating Systems",
+      "code": "CS204",
+      "credits": 3,
+      "gradeStatus": "passed"
+    },
+    {
+      "id": 5,
+      "name": "Machine Learning",
+      "code": "CS305",
+      "credits": 4,
+      "gradeStatus": "pending"
+    }
+  ],
+  "students": [
+    {
+      "id": 1,
+      "name": "Ayush Arvind",
+      "email": "ayush.23bce11017@vitbhopal.ac.in",
+      "gpa": 3.8
+    }
+  ],
+  "enrollments": [
+    {
+      "id": 1,
+      "studentId": 1,
+      "courseId": 1
+    },
+    {
+      "id": 2,
+      "studentId": 1,
+      "courseId": 2
+    }
+  ]
+}

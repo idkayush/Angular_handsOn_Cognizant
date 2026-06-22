@@ -1,0 +1,1 @@
+<h1>Student Profile</h1><section class="panel"><h2>Ayush Arvind</h2><p>Email: ayush.23bce11017@vitbhopal.ac.in</p><p>GPA: 3.8</p></section><section class="panel"><h2>Enrolled Courses</h2><ul><li *ngFor="let c of enrolledCourses$ | async">{{ c.name }} - {{ c.code }}</li></ul><p *ngIf="(enrolledCourses$ | async)?.length === 0">No enrolled courses yet.</p></section>
