@@ -1,0 +1,3 @@
+package com.cognizant.springlearn.controller;
+import java.util.*; import org.springframework.security.core.Authentication; import org.springframework.web.bind.annotation.*; import com.cognizant.springlearn.security.JwtUtil;
+@RestController public class AuthenticationController { private final JwtUtil jwtUtil; public AuthenticationController(JwtUtil jwtUtil){this.jwtUtil=jwtUtil;} @GetMapping("/authenticate") public Map<String,String> authenticate(Authentication authentication){ Collection<String> roles=authentication.getAuthorities().stream().map(a -> a.getAuthority()).toList(); String token=jwtUtil.generateToken(authentication.getName(), roles); return Map.of("token", token); } }

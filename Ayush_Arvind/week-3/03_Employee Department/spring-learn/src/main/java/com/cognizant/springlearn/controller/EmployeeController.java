@@ -1,0 +1,3 @@
+package com.cognizant.springlearn.controller;
+import java.util.*; import org.slf4j.*; import org.springframework.web.bind.annotation.*; import com.cognizant.springlearn.model.Employee; import com.cognizant.springlearn.service.EmployeeService;
+@RestController public class EmployeeController { private static final Logger LOGGER=LoggerFactory.getLogger(EmployeeController.class); private final EmployeeService service; public EmployeeController(EmployeeService service){this.service=service;} @GetMapping("/employees") public List<Employee> getAllEmployees(){ LOGGER.info("START"); LOGGER.info("END"); return service.getAllEmployees(); } @GetMapping("/employees/{id}") public Employee getEmployee(@PathVariable int id){ return service.getEmployee(id); } }
