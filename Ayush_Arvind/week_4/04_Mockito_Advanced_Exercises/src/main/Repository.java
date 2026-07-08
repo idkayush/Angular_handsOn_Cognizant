@@ -1,1 +1,5 @@
-package com.ayush.advancedmock; public interface Repository { String getData(); }
+package com.ayush.advancedmock; 
+public interface Repository 
+{
+  String getData(); 
+}
