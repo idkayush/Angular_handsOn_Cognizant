@@ -1,1 +1,4 @@
-package com.ayush.advancedmock; public interface FileReader { String read(); }
+package com.ayush.advancedmock;
+public interface FileReader { 
+  String read();
+}
