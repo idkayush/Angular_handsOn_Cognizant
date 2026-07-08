@@ -1,0 +1,1 @@
+package com.ayush.advanced; import org.junit.jupiter.api.Test; import java.time.Duration; import static org.junit.jupiter.api.Assertions.*; class PerformanceTesterTest { @Test void completesWithinTimeout(){ assertTimeout(Duration.ofMillis(200), () -> assertEquals("completed", new PerformanceTester().performTask())); }}

@@ -1,0 +1,1 @@
+package com.ayush.logging; import org.junit.jupiter.api.Test; class LoggingExampleTest { @Test void runsWithoutError(){ LoggingExample.main(new String[]{}); }}

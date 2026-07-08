@@ -1,0 +1,1 @@
+package com.ayush.advanced; import org.junit.jupiter.api.Test; import static org.junit.jupiter.api.Assertions.*; class ExceptionThrowerTest { @Test void throwsExpectedException(){ assertThrows(IllegalStateException.class, () -> new ExceptionThrower().throwException()); }}

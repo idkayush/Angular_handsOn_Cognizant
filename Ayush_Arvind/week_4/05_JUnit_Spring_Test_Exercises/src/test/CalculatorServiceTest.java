@@ -1,0 +1,1 @@
+package com.ayush.springtest; import org.junit.jupiter.api.Test; import static org.junit.jupiter.api.Assertions.*; class CalculatorServiceTest { @Test void addReturnsSum(){ assertEquals(9,new CalculatorService().add(4,5)); }}

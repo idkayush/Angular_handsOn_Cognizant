@@ -1,0 +1,1 @@
+package com.ayush.advanced; import org.junit.jupiter.api.*; import static org.junit.jupiter.api.Assertions.*; @TestMethodOrder(MethodOrderer.OrderAnnotation.class) class OrderedTests { static String value=""; @Test @Order(1) void first(){ value="A"; assertEquals("A",value);} @Test @Order(2) void second(){ value += "B"; assertEquals("AB",value);} }
