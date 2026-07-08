@@ -1,1 +1,4 @@
-package com.ayush.advancedmock; public interface NetworkClient { String connect(); }
+package com.ayush.advancedmock; 
+public interface NetworkClient {
+  String connect();
+}
