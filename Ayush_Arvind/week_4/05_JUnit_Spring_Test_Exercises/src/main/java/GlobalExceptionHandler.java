@@ -1,1 +1,12 @@
-package com.ayush.springtest; import org.springframework.http.*; import org.springframework.web.bind.annotation.*; import java.util.*; @ControllerAdvice public class GlobalExceptionHandler { @ExceptionHandler(NoSuchElementException.class) public ResponseEntity<String> handleNotFound(NoSuchElementException ex){ return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found"); } }
+package com.ayush.springtest; 
+import org.springframework.http.*;
+import org.springframework.web.bind.annotation.*;
+import java.util.*; @ControllerAdvice
+public class GlobalExceptionHandler
+{
+  @ExceptionHandler(NoSuchElementException.class)
+  public ResponseEntity<String> handleNotFound(NoSuchElementException ex)
+  {
+    return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found");
+  }
+}
